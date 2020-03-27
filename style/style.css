@@ -9,26 +9,32 @@ body{
 }
 .box{
   border: 2px solid red;
-  margin: 150px 400px;
-  position: relative;
-  height: 200px;
   width: 200px;
-  background-color: #c185f1;
+  height: 200px;
+  margin: 50px auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  box-shadow: 4px 4px 10px black;
+  align-items: center;
+  box-shadow: 0px 0px 8px black;
 }
 .circle{
-  transition: 2s;
+  border-radius: 5px;
+  animation-name: cuadrado;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
   width: 150px;
   height: 150px;
   border: 1px solid black;
   background-color: rgb(81, 64, 185);
 }
 
-.box:hover .circle{
-  transform-origin: 0% 0%;
-  transform: rotateZ(45deg);
+@keyframes cuadrado {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
