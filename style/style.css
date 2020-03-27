@@ -10,10 +10,9 @@ body{
 .box{
   border: 2px solid red;
   margin: 150px 400px;
-  border-radius: 20px;
   position: relative;
-  height: 400px;
-  width: 40px;
+  height: 200px;
+  width: 200px;
   background-color: #c185f1;
   display: flex;
   flex-wrap: wrap;
@@ -31,5 +30,6 @@ body{
 }
 
 .box:hover {
-  transform: skew(15deg, 15deg);
+  transform-origin: left top;
+  transform: rotateZ(45deg);
 }
