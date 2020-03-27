@@ -24,10 +24,11 @@ body{
 .circle{
   border-radius: 50%;
   animation-name: cuadrado;
-  animation-duration: 5s;
-  animation-delay: 500ms;
+  animation-duration: 4s;
+  animation-delay: 10ms;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, .99);
   width: 150px;
   height: 150px;
   border: 1px solid black;
