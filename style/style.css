@@ -29,6 +29,6 @@ body{
 }
 
 .box:hover .circle{
-  transform-origin: right top;
-  transform: rotateZ(-45deg);
+  transform-origin: 0% 0%;
+  transform: rotateZ(45deg);
 }
