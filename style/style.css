@@ -23,12 +23,13 @@ body{
 }
 .circle{
   border-radius: 50%;
-  animation-name: cuadrado;
-  animation-duration: 4s;
+  animation-name: cuadrado, rebote;
+  animation-duration: 2s, .3s;
   animation-delay: 10ms;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(1, -0.01, 0, .99);
+  animation-direction: alternate;
+  /* animation-timing-function: cubic-bezier(1, -0.01, 0, .99); */
+  animation-timing-function: linear, ease-in-out;
   width: 150px;
   height: 150px;
   border: 1px solid black;
@@ -42,5 +43,13 @@ body{
   }
   100%{
     left: calc(100% - 162px);
+  }
+}
+@keyframes rebote {
+  from{
+    transform: translateY(-15px);
+  }
+  to{
+    transform: translateY(15px) scale(1.1, 1);
   }
 }
