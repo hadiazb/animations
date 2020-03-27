@@ -9,7 +9,7 @@ body{
 }
 .box{
   border: 2px solid red;
-  margin: 150px 10px;
+  margin: 150px 400px;
   border-radius: 20px;
   position: relative;
   height: 400px;
@@ -31,5 +31,5 @@ body{
 }
 
 .box:hover {
-  transform: translate3d(500px, -150px, -100px);
+  transform: skew(15deg, 15deg);
 }
