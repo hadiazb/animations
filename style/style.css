@@ -3,59 +3,65 @@
   margin: 0;
   padding: 0;
 }
-display: flex;
-/*align-items: center;*/
-align-items: flex-start;
-justify-content: center;
-height: 100vh;
-color: white;
-font-family: Arial;
+body{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: Arial;
+  background-color: rgb(0, 0, 0);
 }
 .container {
-border: 1px solid red;
-width: 100%;
+  border-bottom: 10px solid rgb(217, 112, 15);
+  border-radius: 4px;
+  width: 200px;
+  height: 400px;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-/*.cuadrado:hover {*/
 .container:hover .cuadrado {
-animation-play-state: paused;
+  animation-play-state: paused;
 }
 .cuadrado {
-width: 200px;
-height: 200px;
-background: #7dc900;
-margin: 20px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-animation-name: cuadrado, rebote;
-animation-duration: 3s, .3s;
-animation-iteration-count: infinite, 20;
-animation-direction: alternate;
-animation-timing-function: linear, ease-in-out;
-position: relative;
+  width: 50px;
+  height: 50px;
+  background: rgb(217, 112, 15);
+  margin: 0;
+  border-radius: 50%;
+  animation-name: load;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  position: relative;
 }
-@keyframes cuadrado {
-0% {
-  left: 0;
+@keyframes load {
+from{
+  /* bottom: calc(300px - 100px); */
+  transform: translateY(0) scale(1.3, 1);
 }
-100% {
-  left: calc(100% - 240px);
+to{
+  /* top: 0px; */
+  transform: translateY(-200px) ;
 }
 }
-@keyframes escalera {
+/* @keyframes escalera {
 from {
   transform: translateY(0);
 }
 to {
   transform: translateY(500px);
 }
-}
+} */
 @keyframes rebote {
 from {
   transform: translateY(0);
 }
 to {
-  transform: translateY(100px) scale(1, .8);
+  transform: translateY(500px) scale(1, .8);
 }
 }
